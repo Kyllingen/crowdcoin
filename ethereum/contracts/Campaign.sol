@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: MIT
 
-pragma solidity ^0.8.15;
+pragma solidity ^0.8.9;
 
 contract CampaignFactory {
      address payable[] public deployedCampaigns;
@@ -49,7 +49,7 @@ contract Campaign {
     }
 
     function createRequest(string memory description, uint value, address recipient) public restricted {
-        Request storage newRequest = request.push();
+        Request storage newRequest = requests.push();
         newRequest.description = description;
         newRequest.value = value;
         newRequest.recipient = recipient;

@@ -28,7 +28,9 @@ const input = {
 
 // compile both contracts and save to build directory
 const output = JSON.parse(
-    solc.compile(JSON.stringify(input))).contracts["Campaign.sol"];
+    solc.compile(JSON.stringify(input))).contracts[
+    "Campaign.sol"
+];
 fs.ensureDirSync(buildPath);
 
 
